@@ -31,20 +31,21 @@ contains
 subroutine cheb_node (tag, a, b, n, xcol, is_descending)
     !! This subroutine returns coordinates of the Chebyshev nodes in [a,b].
     !!
-    !! References:
-    !! 1. "Spectral differencing with a twist", R. Baltensperger and M. R. Trummer,
-    !!    SIAM J. SCI. COMPUT., Vol. 24, No. 5, pp. 1465–1487, 2003.
+    !! **References**
+    !!
+    !! 1. R. Baltensperger and M. R. Trummer, "Spectral differencing with a twist",
+    !!    SIAM J. Sci. Comput., Vol. 24, No. 5, pp. 1465–1487, 2003.
     !!    Page 1471, first paragraph.
     !! 
     !! 2. J. A. C. Weideman and S. C. Reddy, "A MATLAB Differentiation Matrix
     !!    Suite", ACM Transactions on Mathematical Software, Vol. 26, No. 4,
     !!   December 2000, Pages 465–519.
     !!
-    !! Note from Ref 2.: An additional complication is the fact that sin(theta) can be 
-    !! computed to high relative accuracy when theta is almost equal to zero, 
-    !! but sin(pi-theta) cannot.
+    !! > _Note from Ref 2._ An additional complication is the fact that sin(theta)  
+    !! > can be computed to high relative accuracy when theta is almost equal  
+    !! > to zero, but sin(pi-theta) cannot.
     !!
-    !! Implementation notes: In view of the above, the formulas are rearranged 
+    !! _Implementation notes._ In view of the above, the formulas are rearranged 
     !! using the identity cos(theta) = sin(pi/2 - theta), such that we need to
     !! calculate the sines of angles in [0,pi/2]. Moreover, the CG and CGL 
     !! nodes are symmetric about the origin; so, for enhanced accuracy and
@@ -54,8 +55,10 @@ subroutine cheb_node (tag, a, b, n, xcol, is_descending)
     !! evaluate the sines for angles in [0,pi/2].
 
     character(len=*), intent (in) :: tag
-        !! Type of nodes: {'CGL', 'CG', 'CGR'}, where 'CGL': Chebyshev-Gauss-Lobatto, 
-        !! 'CG': Chebyshev-Gauss, 'CGR': Chebyshev-Gauss-Radau.
+        !! {`'CGL'`, `'CG'`, `'CGR'`}
+        !!
+        !! Type of nodes, where `'CGL'`: _Chebyshev-Gauss-Lobatto_, 
+        !! `'CG'`: _Chebyshev-Gauss_, and `'CGR'`: _Chebyshev-Gauss-Radau_.
     real(rp), intent(in) :: a, b
         !! Domain bounds [a, b]
     integer, intent(in) :: n
@@ -153,7 +156,10 @@ subroutine cheb_node (tag, a, b, n, xcol, is_descending)
 
 function cheb_eval(n, x) result(res)
     !! Evaluates a Chebyshev polynomial of degree n at x (-1 <= x <= 1).
-    !! Reference: Kopriva, D (2009) Implementing spectral methods for partial 
+    !!
+    !! **Reference** 
+    !!
+    !! Kopriva, D (2009) Implementing spectral methods for partial 
     !! differential equations, Springer, p. 60 (Algorithm 21).
 
     integer, intent(in) :: n
@@ -201,7 +207,7 @@ function cheb_ser_eval ( n, c, x ) result(res)
     !!    William Press, Brian Flannery, Saul Teukolsky, William Vetterling,
     !!    Numerical Recipes in FORTRAN: The Art of Scientific Computing,
     !!    Second Edition, Cambridge University Press, 1992,
-    !!    ISBN: 0-521-43064-X, LC: QA297.N866,  Page: 185--187
+    !!    Page: 185--187
 
     integer,  intent (in)  :: n
         !! Highest degree of T_n (x).
