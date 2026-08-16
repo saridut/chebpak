@@ -41,9 +41,11 @@ subroutine cheb_node (tag, a, b, n, xcol, is_descending)
     !!    Suite", ACM Transactions on Mathematical Software, Vol. 26, No. 4,
     !!   December 2000, Pages 465–519.
     !!
-    !! > _Note from Ref 2._ An additional complication is the fact that sin(theta)  
-    !! > can be computed to high relative accuracy when theta is almost equal  
-    !! > to zero, but sin(pi-theta) cannot.
+    !!@note
+    !! _From Ref 2._ An additional complication is the fact that sin(theta) 
+    !!   can be computed to high relative accuracy when theta is almost equal 
+    !!   to zero, but sin(pi-theta) cannot.
+    !!@endnote
     !!
     !! _Implementation notes._ In view of the above, the formulas are rearranged 
     !! using the identity cos(theta) = sin(pi/2 - theta), such that we need to
@@ -55,8 +57,7 @@ subroutine cheb_node (tag, a, b, n, xcol, is_descending)
     !! evaluate the sines for angles in [0,pi/2].
 
     character(len=*), intent (in) :: tag
-        !! {`'CGL'`, `'CG'`, `'CGR'`}
-        !!
+        !! {`'CGL'`, `'CG'`, `'CGR'`}  
         !! Type of nodes, where `'CGL'`: _Chebyshev-Gauss-Lobatto_, 
         !! `'CG'`: _Chebyshev-Gauss_, and `'CGR'`: _Chebyshev-Gauss-Radau_.
     real(rp), intent(in) :: a, b
@@ -196,18 +197,22 @@ function cheb_ser_eval ( n, c, x ) result(res)
 
     !! f(x), x E [-1,1] is given by the following appproximation
     !! formula in terms of Chebyshev polynomials:
-    !! f(x) = (1/2)*c_0 * T_0(x) + ... + c_n * T_n(x)
+    !!
+    !!~~~
+    !!f(x) = (1/2)*c_0*T_0(x) + ... + c_n*T_n(x)
+    !!~~~
     !! 
     !! Given the vector of coefficients, c(0), ..., c(n), this routine
     !! evaluates the above sum at a point x E [-1,1].
     !! 
     !! Clenshaw recursion formula is used to evaluate the sum.
     !! 
-    !! Reference:
-    !!    William Press, Brian Flannery, Saul Teukolsky, William Vetterling,
-    !!    Numerical Recipes in FORTRAN: The Art of Scientific Computing,
-    !!    Second Edition, Cambridge University Press, 1992,
-    !!    Page: 185--187
+    !! *Reference*
+    !!
+    !! William Press, Brian Flannery, Saul Teukolsky, William Vetterling,
+    !! Numerical Recipes in FORTRAN: The Art of Scientific Computing,
+    !! Second Edition, Cambridge University Press, 1992,
+    !! Page: 185--187
 
     integer,  intent (in)  :: n
         !! Highest degree of T_n (x).
@@ -242,6 +247,7 @@ function cheb_ser_eval2 ( nx, ny, c, x, y, rwrk ) result(res)
 
     !! f(x,y), (x,y) E [-1,1]x[-1,1] is given by the following appproximation
     !! formula in terms of Chebyshev polynomials:
+    !!
     !! f(x,y) = (1/2)*c_00 * T_0(x)*T_0(y) + ... + c_mn * T_m(x)*T_n(y)
     !! 
     !! Given the vector of coefficients, c(0), ..., c(n), this routine
@@ -282,6 +288,7 @@ function cheb_ser_eval3 ( nx, ny, nz, c, x, y, z, rwrk ) result(res)
 
     !! f(x,y), (x,y) E [-1,1]x[-1,1] is given by the following appproximation
     !! formula in terms of Chebyshev polynomials:
+    !!
     !! f(x,y) = (1/2)*c_00 * T_0(x)*T_0(y) + ... + c_mn * T_m(x)*T_n(y)
     !! 
     !! Given the vector of coefficients, c(0), ..., c(n), this routine
@@ -325,8 +332,9 @@ function cheb_quad (tag, a, b, n, x, f) result(valint)
     !! quadrature for a single variable.
 
     character(len=*), intent (in) :: tag
-        !! Type of nodes: {'CGL', 'CG', 'CGR'}, where 'CGL': Chebyshev-Gauss-Lobatto, 
-        !! 'CG': Chebyshev-Gauss, 'CGR': Chebyshev-Gauss-Radau.
+        !! {`'CGL'`, `'CG'`, `'CGR'`}  
+        !! Type of nodes, where `'CGL'`: _Chebyshev-Gauss-Lobatto_, 
+        !! `'CG'`: _Chebyshev-Gauss_, and `'CGR'`: _Chebyshev-Gauss-Radau_.
     real(rp), intent(in) :: a, b
         !! Domain bounds [a, b]
     integer,  intent (in) :: n
@@ -381,8 +389,9 @@ function cheb_quad2 (tag, x0, x1, y0, y1, nx, ny, x, y, f, rwrk) result(valint)
     !! quadrature for two variables.
 
     character(len=*), intent (in) :: tag
-        !! Type of nodes: {'CGL', 'CG', 'CGR'}, where 'CGL': Chebyshev-Gauss-Lobatto, 
-        !! 'CG': Chebyshev-Gauss, 'CGR': Chebyshev-Gauss-Radau.
+        !! {`'CGL'`, `'CG'`, `'CGR'`}  
+        !! Type of nodes, where `'CGL'`: _Chebyshev-Gauss-Lobatto_, 
+        !! `'CG'`: _Chebyshev-Gauss_, and `'CGR'`: _Chebyshev-Gauss-Radau_.
     real(rp), intent(in) :: x0, x1, y0, y1
         !! Domain bounds [x0, x1]x[y0, y1] along x and y directions.
     integer,  intent (in) :: nx, ny
@@ -421,8 +430,9 @@ function cheb_quad3 (tag, x0, x1, y0, y1, z0, z1, nx, ny, nz, x, y, z, f, rwrk) 
     !! quadrature for three variables.
 
     character(len=*), intent (in) :: tag
-        !! Type of nodes: {'CGL', 'CG', 'CGR'}, where 'CGL': Chebyshev-Gauss-Lobatto, 
-        !! 'CG': Chebyshev-Gauss, 'CGR': Chebyshev-Gauss-Radau.
+        !! {`'CGL'`, `'CG'`, `'CGR'`}  
+        !! Type of nodes, where `'CGL'`: _Chebyshev-Gauss-Lobatto_, 
+        !! `'CG'`: _Chebyshev-Gauss_, and `'CGR'`: _Chebyshev-Gauss-Radau_.
     real(rp), intent(in) :: x0, x1, y0, y1, z0, z1
         !! Domain bounds [x0, x1]x[y0, y1]x[z0, z1] along x, y, and z directions.
     integer,  intent (in) :: nx, ny, nz
@@ -462,10 +472,10 @@ subroutine cheb_n1dmat (x0, x1, n, rwrk, dm)
     !! Calculates the nodal first derivative matrix for CGL nodes in [x0,x1]
     !! Assumes the nodal coordinates to be in ascending order in the domain [-1,1].
     !!
-    !! References:
+    !! **References**
     !!
     !! 1. "Spectral differencing with a twist", Richard Baltensperger and Manfred 
-    !!    R. Trummer, SIAM J. SCI. COMPUT., Vol. 24, No. 5, pp. 1465–1487, 2003.
+    !!    R. Trummer, SIAM J. Sci. Comput., Vol. 24, No. 5, pp. 1465–1487, 2003.
     !!
     !! 2. Costa, B. and Don, W. S. (2000), 'On the computation of high order
     !!    pseudospectral derivatives', Applied Numerical Mathematics, 33, 151-159.
@@ -528,10 +538,10 @@ subroutine cheb_n1dmat (x0, x1, n, rwrk, dm)
 subroutine cheb_n2dmat (n, dm1, dm2)
     !! Calculates the nodal second derivative matrix for CGL/CG/CGR nodes.
     !!
-    !! References:
+    !! **References**
     !!
     !! 1. "Spectral differencing with a twist", Richard Baltensperger and Manfred 
-    !!    R. Trummer, SIAM J. SCI. COMPUT., Vol. 24, No. 5, pp. 1465–1487, 2003.
+    !!    R. Trummer, SIAM J. Sci. Comput., Vol. 24, No. 5, pp. 1465–1487, 2003.
     !!
     !! 2. Costa, B. and Don, W. S. (2000), 'On the computation of high order
     !!    pseudospectral derivatives', Applied Numerical Mathematics, 33, 151-159.
@@ -763,12 +773,14 @@ subroutine cheb_dctmat (n, mat, rwrk)
     !! The matrix is not symmetric and assumes the nodal coordinates to be in
     !! ascending order.
     !!
-    !! Reference:
-    !!      1. Canuto et al. (2006), 'Spectral Methods: Fundamentals in Single Domains',
-    !!         Chapter 2, pp. 86, eqn. (2.4.15)
-    !!      2. Gheorghiu, C. I. (2007),  'Spectral Methods for Differential Problems',
-    !!         Casa Cartii de Stiinta, Cluj-Napoca, ISBN 978-973-133-099-0
-    !!         pp. 18, eqn. (1.40, 1.41)
+    !! **Reference**
+    !!
+    !! 1. Canuto et al. (2006), 'Spectral Methods: Fundamentals in Single Domains',
+    !! Chapter 2, pp. 86, eqn. (2.4.15)
+    !!
+    !! 2. Gheorghiu, C. I. (2007),  'Spectral Methods for Differential Problems',
+    !! Casa Cartii de Stiinta, Cluj-Napoca, ISBN 978-973-133-099-0
+    !! pp. 18, eqn. (1.40, 1.41)
 
     integer,  intent (in) :: n
         !! Degree of polynomial
@@ -803,12 +815,14 @@ subroutine cheb_dctmat2 (nx, ny, mat, rwrk)
     !! The matrix is not symmetric and assumes the nodal coordinates to be in
     !! ascending order.
     !!
-    !! Reference:
-    !!      1. Canuto et al. (2006), 'Spectral Methods: Fundamentals in Single Domains',
-    !!         Chapter 2, pp. 86, eqn. (2.4.15)
-    !!      2. Gheorghiu, C. I. (2007),  'Spectral Methods for Differential Problems',
-    !!         Casa Cartii de Stiinta, Cluj-Napoca, ISBN 978-973-133-099-0
-    !!         pp. 18, eqn. (1.40, 1.41)
+    !! **Reference**
+    !!
+    !!1. Canuto et al. (2006), 'Spectral Methods: Fundamentals in Single Domains',
+    !!   Chapter 2, pp. 86, eqn. (2.4.15)
+    !!
+    !!2. Gheorghiu, C. I. (2007),  'Spectral Methods for Differential Problems',
+    !!   Casa Cartii de Stiinta, Cluj-Napoca, ISBN 978-973-133-099-0
+    !!   pp. 18, eqn. (1.40, 1.41)
 
     integer, intent (in) :: nx
         !! Degree of polynomial along x direction
@@ -864,12 +878,14 @@ subroutine cheb_dictmat (n, mat)
     !! not symmetric and yields the nodal function values assuming the nodal coordinates
     !! are in ascending order.
     !! 
-    !! Reference:
-    !!      1. Canuto et al. (2006), 'Spectral Methods: Fundamentals in Single Domains',
-    !!         Chapter 2, pp. 86, eqn. (2.4.15)
-    !!      2. Gheorghiu, C. I.,  'Spectral Methods for Differential Problems',
-    !!         Casa Cartii de Stiinta, Cluj-Napoca, ISBN 978-973-133-099-0
-    !!         pp. 18, eqn. (1.40, 1.41)
+    !! **Reference**
+    !!
+    !!1. Canuto et al. (2006), 'Spectral Methods: Fundamentals in Single Domains',
+    !!   Chapter 2, pp. 86, eqn. (2.4.15)
+    !!
+    !!2. Gheorghiu, C. I. (2007),  'Spectral Methods for Differential Problems',
+    !!   Casa Cartii de Stiinta, Cluj-Napoca, ISBN 978-973-133-099-0
+    !!   pp. 18, eqn. (1.40, 1.41)
            
     integer,  intent (in) :: n
         !! Degree of polynomial
