@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+#Docs
+docs/html/*
+
+#Temporary and binary files
+.DS_Store
+.*.swp
+ *.log
