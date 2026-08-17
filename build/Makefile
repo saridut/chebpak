@@ -1,4 +1,4 @@
-#Makefile for Taylor with GCC-10 compilers
+#Makefile for gfortran compiler
 
 SHELL = /bin/bash
 
@@ -20,14 +20,14 @@ FCFLAGS = -c -O3 -std=f2008ts \
 		  -frounding-math -fsignaling-nans
 endif
 
-SRC_DIR = $(HOME)/workspace/npl/pplib 
+SRC_DIR = ../src 
 BUILD_DIR = .
-INSTALL_DIR = .
-EXECUTABLE = calc_disp
+LIB_DIR = ../lib
+LIB_NAME = $(LIB_DIR)/libatm2mesh.a
 
 vpath %.f90 $(SRC_DIR)
-vpath $(EXECUTABLE) $(INSTALL_DIR)
 
+#Redefine the location of the interface files if necessary
 MKL_INTRFC = $(HOME)/soft/mkl
 
 INCS = \
@@ -43,28 +43,30 @@ LIBS = \
 
 OBJ_NAMES = \
 		  constants_m    \
-		  M_CLI2         \
 		  strings_m      \
 		  utils_math_m   \
 		  qsort_m        \
 		  vector_m       \
 		  table_m        \
-		  trajectory_reader_m   \
-		  simbox_m       \
-		  specs_m        \
-		  atmcfg_m       \
-		  config_io_m    \
 		  chebyshev_m    \
 		  atc_mesh_m     \
+		  atc_rectmesh_m \
 		  atc_meshgen_m  \
 		  atc_vtk_m      \
-		  atc_atm2mesh_m \
-		  calc_disp
+		  atc_atm2mesh_m
 
 OBJECTS = $(addsuffix .o,$(OBJ_NAMES))
 
-$(EXECUTABLE) : $(OBJECTS)
-	$(FC) $(INCS) $^ $(LIBS) -o $@
+.PHONY : lib
+lib : $(LIB_NAME)
+
+.PHONY : doc
+doc :
+	ford ../docs/ford.md
+
+$(LIB_NAME) : $(OBJECTS)
+	if [ ! -d $(LIB_DIR) ]; then mkdir -p $(LIB_DIR); fi
+	ar -rcs $@ $^
 
 $(OBJECTS) : %.o : %.f90
 	$(FC) $(INCS) $(FCFLAGS) $^ -o $@
@@ -73,4 +75,4 @@ $(OBJECTS) : %.o : %.f90
 clean:
 	-rm -rf *.o *.mod
 clobber:
-	-rm -rf $(INSTALL_DIR)/$(EXECUTABLE) *.o *.mod
+	-rm -rf $(LIB_NAME) *.o *.mod
