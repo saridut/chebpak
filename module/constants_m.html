@@ -1,0 +1,700 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for atm2mesh">
+    <meta name="author" content="Sarit Dutta" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>constants_m &ndash; atm2mesh</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
+    <link href="../css/local.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">atm2mesh <small>0.3.1</small></a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>constants_m
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.7% of total for modules and submodules.">29 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/constants_m.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/constants_m.f90.html'>constants_m.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">constants_m</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/constants_m.html#variable-ip">ip</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-ip_long">ip_long</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-rp">rp</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-sizeof_char">sizeof_char</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-sizeof_int">sizeof_int</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-sizeof_long_int">sizeof_long_int</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-sizeof_real">sizeof_real</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_third">math_third</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_pi">math_pi</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_pi_2">math_pi_2</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_pi_4">math_pi_4</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_1_pi">math_1_pi</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_2_pi">math_2_pi</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_2_sqrtpi">math_2_sqrtpi</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_sqrt2">math_sqrt2</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_cbrt2">math_cbrt2</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_sqrt1_2">math_sqrt1_2</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_sqrt3">math_sqrt3</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_sqrt_e">math_sqrt_e</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_sqrt_pi">math_sqrt_pi</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_e">math_e</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_log2e">math_log2e</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_log10e">math_log10e</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_ln2">math_ln2</a>
+            <a class="list-group-item" href="../module/constants_m.html#variable-math_ln10">math_ln10</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>Predefined constants, including math constants.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_fortran_env'>iso_fortran_env</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ip"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>ip</strong></td>
+<td> =</td>
+                <td>int32</td>
+            <td>
+                <p>Default integer precision</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ip_long"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>ip_long</strong></td>
+<td> =</td>
+                <td>int64</td>
+            <td>
+                <p>Default long integer precision</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rp"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>rp</strong></td>
+<td> =</td>
+                <td>real64</td>
+            <td>
+                <p>Default real precision</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sizeof_char"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>sizeof_char</strong></td>
+<td> =</td>
+                <td>1</td>
+            <td>
+                <p>Size of a char in bytes</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sizeof_int"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>sizeof_int</strong></td>
+<td> =</td>
+                <td>4</td>
+            <td>
+                <p>Size of a default int in bytes</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sizeof_long_int"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>sizeof_long_int</strong></td>
+<td> =</td>
+                <td>8</td>
+            <td>
+                <p>Size of a default long int in bytes</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sizeof_real"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>sizeof_real</strong></td>
+<td> =</td>
+                <td>8</td>
+            <td>
+                <p>Size of a default real in bytes</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_third"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_third</strong></td>
+<td> =</td>
+                <td>0.333333333333333_rp</td>
+            <td>
+                <p><code>One third</code> : <script type="math/tex"> \frac{1}{3} </script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_pi"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_pi</strong></td>
+<td> =</td>
+                <td>3.1415926535897931_rp</td>
+            <td>
+                <p><code>pi</code> : <script type="math/tex"> \pi </script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_pi_2"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_pi_2</strong></td>
+<td> =</td>
+                <td>1.5707963267948966_rp</td>
+            <td>
+                <p><code>pi/2</code> : <script type="math/tex"> \pi / 2 </script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_pi_4"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_pi_4</strong></td>
+<td> =</td>
+                <td>0.78539816339744828_rp</td>
+            <td>
+                <p><code>pi/4</code> : <script type="math/tex"> \pi / 4 </script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_1_pi"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_1_pi</strong></td>
+<td> =</td>
+                <td>0.31830988618379069_rp</td>
+            <td>
+                <p>Reciprocal of <code>pi</code> : <script type="math/tex"> 1/\pi </script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_2_pi"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_2_pi</strong></td>
+<td> =</td>
+                <td>0.63661977236758138_rp</td>
+            <td>
+                <p>Two times reciprocal of <code>pi</code> : <script type="math/tex"> 2/\pi </script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_2_sqrtpi"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_2_sqrtpi</strong></td>
+<td> =</td>
+                <td>1.1283791670955126_rp</td>
+            <td>
+                <p>Two times the reciprocal of the square root of <code>pi</code> : <script type="math/tex"> 2/\sqrt{\pi} </script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_sqrt2"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_sqrt2</strong></td>
+<td> =</td>
+                <td>1.4142135623730951_rp</td>
+            <td>
+                <p>Square root of <code>two</code> : <script type="math/tex">\sqrt{2}</script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_cbrt2"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_cbrt2</strong></td>
+<td> =</td>
+                <td>1.2599210498948732_rp</td>
+            <td>
+                <p>Cube root of <code>two</code> : <script type="math/tex">\sqrt[3]{2}</script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_sqrt1_2"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_sqrt1_2</strong></td>
+<td> =</td>
+                <td>0.70710678118654746_rp</td>
+            <td>
+                <p>Reciprocal of the square root of two : <script type="math/tex">1/\sqrt{2}</script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_sqrt3"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_sqrt3</strong></td>
+<td> =</td>
+                <td>1.7320508075688772_rp</td>
+            <td>
+                <p>Square root of three : <script type="math/tex">\sqrt{3}</script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_sqrt_e"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_sqrt_e</strong></td>
+<td> =</td>
+                <td>1.6487212707001282_rp</td>
+            <td>
+                <p>Square root of <code>e</code> : <script type="math/tex">\sqrt{e}</script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_sqrt_pi"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_sqrt_pi</strong></td>
+<td> =</td>
+                <td>1.7724538509055159_rp</td>
+            <td>
+                <p>Square root of <code>pi</code> : <script type="math/tex">\sqrt{\pi}</script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_e"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_e</strong></td>
+<td> =</td>
+                <td>2.7182818284590451_rp</td>
+            <td>
+                <p>The base of natural logarithm : <script type="math/tex"> e </script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_log2e"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_log2e</strong></td>
+<td> =</td>
+                <td>1.4426950408889634_rp</td>
+            <td>
+                <p>The logarithm of <code>e</code> to base two : <script type="math/tex"> \log_2 e </script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_log10e"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_log10e</strong></td>
+<td> =</td>
+                <td>0.43429448190325182_rp</td>
+            <td>
+                <p>The logarithm of <code>e</code> to base 10 : <script type="math/tex"> \log_{10} e </script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_ln2"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_ln2</strong></td>
+<td> =</td>
+                <td>0.69314718055994529_rp</td>
+            <td>
+                <p>The natural logarithm of two : <script type="math/tex"> \ln 2</script>
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-math_ln10"></span>
+              real(kind=rp),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>math_ln10</strong></td>
+<td> =</td>
+                <td>2.3025850929940459_rp</td>
+            <td>
+                <p>The natural logarithm of 10 : <script type="math/tex"> \ln 10 </script>
+</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              atm2mesh
+ was developed by Sarit Dutta<br>              &copy; 2026 <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+<br>&copy; <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+  </body>
+</html>
