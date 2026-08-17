@@ -1,6 +1,6 @@
 ---
-project: chebpak
-project_github: https://github.com/saridut/chebpak
+project: atm2mesh
+project_github: https://github.com/saridut/atm2mesh
 version: 0.3.1
 author: Sarit Dutta
 email: saridut@gmail.com
