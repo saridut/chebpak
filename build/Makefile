@@ -23,7 +23,7 @@ endif
 SRC_DIR = ../src 
 BUILD_DIR = .
 LIB_DIR = ../lib
-LIB_NAME = $(LIB_DIR)/libatm2mesh.a
+LIB_NAME = $(LIB_DIR)/libchebpak.a
 
 vpath %.f90 $(SRC_DIR)
 
@@ -45,15 +45,7 @@ OBJ_NAMES = \
 		  constants_m    \
 		  strings_m      \
 		  utils_math_m   \
-		  qsort_m        \
-		  vector_m       \
-		  table_m        \
-		  chebyshev_m    \
-		  atc_mesh_m     \
-		  atc_rectmesh_m \
-		  atc_meshgen_m  \
-		  atc_vtk_m      \
-		  atc_atm2mesh_m
+		  chebyshev_m
 
 OBJECTS = $(addsuffix .o,$(OBJ_NAMES))
 
