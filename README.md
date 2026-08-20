@@ -8,16 +8,16 @@ Fortran library for Chebyshev polynomials, derivatve matrices, and interpolation
 - `cheb_eval`  Evaluates a chebyshev polynomial
 - `cheb_ser_eval` Evaluates a chebyshev series.  Multivariate versions 
   `cheb_ser_eval2` and `cheb_ser_eval3`.
-- `cheb_quad`:  Quadrature in single variable. Multivariate versions
+- `cheb_quad`  Quadrature in single variable. Multivariate versions
   `cheb_quad2` and `cheb_quad3`.
-- `cheb_n1dm`: Calculates the nodal first derivative matrix
-- `cheb_n2dm`: Calculates the nodal second derivative matrix
-- `cheb_calc_dctmat`: Calculates the dicrete chebyshev transform matrix
-- `cheb_calc_dictmat`: Calculates the discrete inverse chebyshev transform matrix
-- `bary_weights`: Calculates the barycentric weights
-- `lag_intrp`: Evaluates 1D Lagrange interpolant at a single point.
-- `lag_intrp_mat`:  1D Lagrange interpolation matrix.
-- `lag_intrp_grd`:  Lagrange interpolation to a grid in 1 dimension. For 2 and
+- `cheb_n1dm` Calculates the nodal first derivative matrix
+- `cheb_n2dm` Calculates the nodal second derivative matrix
+- `cheb_calc_dctmat` Calculates the dicrete chebyshev transform matrix
+- `cheb_calc_dictmat` Calculates the discrete inverse chebyshev transform matrix
+- `bary_weights` Calculates the barycentric weights
+- `lag_intrp` Evaluates 1D Lagrange interpolant at a single point.
+- `lag_intrp_mat`  1D Lagrange interpolation matrix.
+- `lag_intrp_grd`  Lagrange interpolation to a grid in 1 dimension. For 2 and
   3 dimensions use `lag_intrp_grd2` and `lag_intrp_grd3`.
 
 
