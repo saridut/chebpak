@@ -63,9 +63,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="../lists/procedures.html">Procedures</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
-                </li>
             </ul>
               <div class="d-flex align-items-end flex-grow-1">
                 <form action="../search.html" role="search" class="ms-auto">
@@ -119,30 +116,12 @@ tolerance.</p></td>
 tolerance.</p></td>
                </tr>
 			   <tr>
-                 <td><a href='../interface/assignment(=).html'>assignment(=)</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Interface</td>
-                 <td></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/atm_to_mesh.html'>atm_to_mesh</a></td>
-                 <td><a href='../module/atc_atm2mesh_m.html'>atc_atm2mesh_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Spread atomic property to the mesh nodes.</p></td>
-               </tr>
-			   <tr>
                  <td><a href='../proc/bary_weights.html'>bary_weights</a></td>
                  <td><a href='../module/chebyshev_m.html'>chebyshev_m</a></td>
                  <td>Subroutine</td>
                  <td><p>Calculates the barycentric weights for a given set of nodes.
 As of now, assumues CGL nodes.
 TODO: extend stably for the general case (CGL, CGR, CG)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/build_spread_mat.html'>build_spread_mat</a></td>
-                 <td><a href='../module/atc_atm2mesh_m.html'>atc_atm2mesh_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Construct the speading matrix</p></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/cheb_dctmat.html'>cheb_dctmat</a></td>
@@ -289,22 +268,10 @@ where <strong>b</strong> is another 3-element vector.</p></td>
                  <td></td>
                </tr>
 			   <tr>
-                 <td><a href='../proc/delete_spread_mat.html'>delete_spread_mat</a></td>
-                 <td><a href='../module/atc_atm2mesh_m.html'>atc_atm2mesh_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Destroy the speading matrix.</p></td>
-               </tr>
-			   <tr>
                  <td><a href='../proc/det.html'>det</a></td>
                  <td><a href='../module/utils_math_m.html'>utils_math_m</a></td>
                  <td>Function</td>
                  <td><p>Returns the determinant of an (N x N) matrix, where N = 2, 3, or 4.</p><a href="../proc/det.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dqsort.html'>dqsort</a></td>
-                 <td><a href='../module/qsort_m.html'>qsort_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Sorts a sequence of reals</p></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/dsyevc3.html'>dsyevc3</a></td>
@@ -316,114 +283,6 @@ Only the diagonal and upper triangular parts of A are accessed. The access
 is read-only.</p><a href="../proc/dsyevc3.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
-                 <td><a href='../proc/dvector_append.html'>dvector_append</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Adds an element to the end of a <em>dvector</em>. Reallocation will take place if required.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_assign.html'>dvector_assign</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Copies the contents of <em>dvector</em> <code>other</code> to <em>dvector</em> <code>this</code></p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_clear.html'>dvector_clear</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Clears a <em>dvector</em>. Access allowed after a call to clear.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_delete.html'>dvector_delete</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Deletes a <em>dvector</em>. No access is allowed to this object after this call.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_from_array.html'>dvector_from_array</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Creates a <em>dvector</em> with all elements from an array</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_get_data.html'>dvector_get_data</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Returns a pointer to the underlying data of a <em>dvector</em></p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_get_len.html'>dvector_get_len</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns the length of a <em>dvector</em></p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_get_val.html'>dvector_get_val</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns the ith element of a <em>dvector</em>.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_init.html'>dvector_init</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Creates an empty <em>dvector</em> with all elements equal to zero.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../interface/dvector_init.html'>dvector_init</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Interface</td>
-                 <td></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_pop.html'>dvector_pop</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Function</td>
-                 <td><p>Removes the last element and returns it. Calling this method on an empty list</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_print.html'>dvector_print</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Prints a <em>dvector</em></p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_resize.html'>dvector_resize</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Resizes a vector to a given size. Existing data is truncated if desired size
-is smaller than current size. Otherwise, the empty spaces are filled with
-zero.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_set_val.html'>dvector_set_val</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Sets the value of the ith element of a <em>dvector</em>. No bounds check is performed.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_shrink_to_fit.html'>dvector_shrink_to_fit</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Releases additional memory to fit underlying data of a <em>dvector</em> to a size
-this%len_init.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_sort.html'>dvector_sort</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Sorts a <em>dvector</em> in ascending order. If <code>order</code> is provided, it will contain
-the sorted indices.  The size of <code>order</code> must be at least <code>this%len</code>.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/dvector_unique.html'>dvector_unique</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Sorts and removes all duplicate entries of a <em>dvector</em>. Note that the internal
-buffer size remains unchanged. To reduce the buffer size, call
-<code>dvector_shrink_to_fit</code>.</p></td>
-               </tr>
-			   <tr>
                  <td><a href='../proc/eigval_33rsym.html'>eigval_33rsym</a></td>
                  <td><a href='../module/utils_math_m.html'>utils_math_m</a></td>
                  <td>Subroutine</td>
@@ -432,28 +291,10 @@ eigenvalues calculated are in decreasing order. Only the diagonal and
 lower triangular part of the matrix is accessed.</p><a href="../proc/eigval_33rsym.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
-                 <td><a href='../proc/floc.html'>floc</a></td>
-                 <td><a href='../module/atc_atm2mesh_m.html'>atc_atm2mesh_m</a></td>
-                 <td>Function</td>
-                 <td><p>Localization function.</p></td>
-               </tr>
-			   <tr>
                  <td><a href='../proc/get_diagonal.html'>get_diagonal</a></td>
                  <td><a href='../module/utils_math_m.html'>utils_math_m</a></td>
                  <td>Subroutine</td>
                  <td><p>Returns the diagonal elements of a square matrix.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/get_indx2_1d.html'>get_indx2_1d</a></td>
-                 <td><a href='../module/atc_mesh_m.html'>atc_mesh_m</a></td>
-                 <td>Function</td>
-                 <td><p>Converts 2D index to 1D index</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/get_indx3_1d.html'>get_indx3_1d</a></td>
-                 <td><a href='../module/atc_mesh_m.html'>atc_mesh_m</a></td>
-                 <td>Function</td>
-                 <td><p>Converts 3D index to 1D index</p></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/get_quad_form.html'>get_quad_form</a></td>
@@ -461,13 +302,6 @@ lower triangular part of the matrix is accessed.</p><a href="../proc/eigval_33rs
                  <td>Function</td>
                  <td><p>Calculates the quadratic form <em>x^T A x</em>, where A is an <em>n x n</em> matrix and <em>x</em> is a
 vector of length <em>n</em></p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/i_dvector_assign.html'>i_dvector_assign</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Copies the contents of <em>ivector</em> <code>other</code> to <em>dvector</em> <code>this</code>. Integers
-are cast to reals.</p></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/identity.html'>identity</a></td>
@@ -482,132 +316,11 @@ are cast to reals.</p></td>
                  <td><p>Inverts a 3x3 matrix.</p><a href="../proc/invert_mat33.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
                </tr>
 			   <tr>
-                 <td><a href='../proc/iqsort.html'>iqsort</a></td>
-                 <td><a href='../module/qsort_m.html'>qsort_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Sorts a sequence of integers</p></td>
-               </tr>
-			   <tr>
                  <td><a href='../proc/isclose.html'>isclose</a></td>
                  <td><a href='../module/utils_math_m.html'>utils_math_m</a></td>
                  <td>Function</td>
                  <td><p>Checks if two floating point numbers of type double are close within
 tolerance.</p><a href="../proc/isclose.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/itbl_init.html'>itbl_init</a></td>
-                 <td><a href='../module/table_m.html'>table_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Creates an empty <em>itable_t</em> with <em>num_rows</em> rows and all rows having
-zero elements.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_append.html'>ivector_append</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Adds an element to the end of an <em>ivector</em>. Reallocation will take place if required.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_assign.html'>ivector_assign</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Copies the contents of <em>ivector</em> <code>other</code> to <em>ivector</em> <code>this</code></p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_clear.html'>ivector_clear</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Clears an <em>ivector</em>. Access allowed after a call to clear.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_delete.html'>ivector_delete</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Deletes an <em>ivector</em>. No access is allowed to this object after this call.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_from_array.html'>ivector_from_array</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Creates an <em>ivector</em> with all elements from an array</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_get_data.html'>ivector_get_data</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Returns a pointer to the underlying data of an <em>ivector</em></p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_get_len.html'>ivector_get_len</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns the length of an <em>ivector</em></p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_get_val.html'>ivector_get_val</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns the ith element of an <em>ivector</em>.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_init.html'>ivector_init</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Creates an empty <em>ivector</em> with all elements equal to zero.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../interface/ivector_init.html'>ivector_init</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Interface</td>
-                 <td></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_pop.html'>ivector_pop</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Function</td>
-                 <td><p>Removes the last element and returns it. Calling this method on an empty list</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_print.html'>ivector_print</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Prints an <em>ivector</em></p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_resize.html'>ivector_resize</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Resizes a vector to a given size. Existing data is truncated if desired size
-is smaller than current size. Otherwise, the empty spaces are filled with
-zero.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_set_val.html'>ivector_set_val</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Sets the value of the ith element of an <em>ivector</em>. No bounds check is performed.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_shrink_to_fit.html'>ivector_shrink_to_fit</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Releases additional memory to fit underlying data of an <em>ivector</em> to a size
-this%len_init.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_sort.html'>ivector_sort</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Sorts an <em>ivector</em> in ascending order. If <code>order</code> is provided, it will contain
-the sorted indices.  The size of <code>order</code> must be at least <code>this%len</code>.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/ivector_unique.html'>ivector_unique</a></td>
-                 <td><a href='../module/vector_m.html'>vector_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Sorts and removes all duplicate entries of an <em>ivector</em>. Note that the internal
-buffer size remains unchanged. To reduce the buffer size, call
-<code>ivector_shrink_to_fit</code>.</p></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/lag_intrp.html'>lag_intrp</a></td>
@@ -660,107 +373,6 @@ In linear space, the sequence starts at <code>base ** start</code>
 (<code>base</code> to the power of <code>start</code>) and ends with <code>base ** stop</code></p></td>
                </tr>
 			   <tr>
-                 <td><a href='../proc/make_atme_tab.html'>make_atme_tab</a></td>
-                 <td><a href='../module/atc_atm2mesh_m.html'>atc_atm2mesh_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Creates a table assigning atoms to mesh nodes.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh3_build_connectivity.html'>mesh3_build_connectivity</a></td>
-                 <td><a href='../module/atc_mesh_m.html'>atc_mesh_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Build element connectivities for a structured grid</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh3_delete.html'>mesh3_delete</a></td>
-                 <td><a href='../module/atc_mesh_m.html'>atc_mesh_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Deallocates all memory associated with a mesh</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh3_get_elem_centers.html'>mesh3_get_elem_centers</a></td>
-                 <td><a href='../module/atc_mesh_m.html'>atc_mesh_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Returns the geometric centers of the elements in a mesh</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh3_init.html'>mesh3_init</a></td>
-                 <td><a href='../module/atc_mesh_m.html'>atc_mesh_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Initializes a mesh.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh3_nodel_build.html'>mesh3_nodel_build</a></td>
-                 <td><a href='../module/atc_mesh_m.html'>atc_mesh_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Builds node to element connectivity table.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh3_print.html'>mesh3_print</a></td>
-                 <td><a href='../module/atc_mesh_m.html'>atc_mesh_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Prints mesh data (useful for debugging)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh_box.html'>mesh_box</a></td>
-                 <td><a href='../module/atc_meshgen_m.html'>atc_meshgen_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Meshes a box. The lower left back corner is at <em>(x0,y0,z0)</em> and the 
-upper right front corner is at <em>(x1,y1,z1)</em>.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh_box_hex20.html'>mesh_box_hex20</a></td>
-                 <td><a href='../module/atc_meshgen_m.html'>atc_meshgen_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Mesh with 20-node hexahedra.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh_box_hex8.html'>mesh_box_hex8</a></td>
-                 <td><a href='../module/atc_meshgen_m.html'>atc_meshgen_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Mesh with 8-node hexahedra.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh_line.html'>mesh_line</a></td>
-                 <td><a href='../module/atc_meshgen_m.html'>atc_meshgen_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Meshes a straight line. The left end is at <em>(x0,y,z)</em> and the right 
-end is at <em>(x1,y,z)</em>.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh_line2.html'>mesh_line2</a></td>
-                 <td><a href='../module/atc_meshgen_m.html'>atc_meshgen_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Mesh with 2-node linear elements. Node spacing may be uniform or may use the
-Chebyshev-Gauss-Lobatto points.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh_line3.html'>mesh_line3</a></td>
-                 <td><a href='../module/atc_meshgen_m.html'>atc_meshgen_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Mesh with 3-node quadratic elements.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh_rect_quad4.html'>mesh_rect_quad4</a></td>
-                 <td><a href='../module/atc_meshgen_m.html'>atc_meshgen_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Mesh with 4-node quads. Node spacing may be uniform or may use the
-Chebyshev-Gauss-Lobatto points.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh_rect_quad8.html'>mesh_rect_quad8</a></td>
-                 <td><a href='../module/atc_meshgen_m.html'>atc_meshgen_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Mesh with 8-node quads.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/mesh_rectangle.html'>mesh_rectangle</a></td>
-                 <td><a href='../module/atc_meshgen_m.html'>atc_meshgen_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Meshes a rectangle. The lower left corner is at <em>(x0,y0)</em> and the upper
-right corner is at <em>(x1,y1)</em>. The rectangle is on the z=<em>z</em> plane.</p></td>
-               </tr>
-			   <tr>
                  <td><a href='../proc/multiply_transpose.html'>multiply_transpose</a></td>
                  <td><a href='../module/utils_math_m.html'>utils_math_m</a></td>
                  <td>Subroutine</td>
@@ -787,225 +399,10 @@ right corner is at <em>(x1,y1)</em>. The rectangle is on the z=<em>z</em> plane.
                  <td></td>
                </tr>
 			   <tr>
-                 <td><a href='../proc/readline.html'>readline</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Reads a line from unit=nunitr, ignoring blank lines and deleting comments</p></td>
-               </tr>
-			   <tr>
                  <td><a href='../proc/scalar_triple_product.html'>scalar_triple_product</a></td>
                  <td><a href='../module/utils_math_m.html'>utils_math_m</a></td>
                  <td>Function</td>
                  <td><p>Returns the scalar triple product <strong>a</strong>.(<strong>b</strong> x <strong>c</strong>)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_append.html'>str_append</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Appends a copy of the <code>source</code> string to the <code>dest</code> string, with 
-optional string <code>sep</code> in between. It is assumed that <code>dest</code> is long
-enough to hold the result, otherwise an error will be generated.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_compact.html'>str_compact</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns a copy of <code>str</code> with multiple spaces and tabs converted to
-single spaces, control characters deleted, and leading and trailing
-spaces removed.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_compact_rlstr.html'>str_compact_rlstr</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Compact a string representing a real number, so that the same value is
-displayed with fewer characters.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_del.html'>str_del</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Deletes first <code>n</code> occurrences of substring <code>substr</code> from string <code>str</code> and
-shifts characters left to fill hole. If <code>n &lt; 0</code>, all occurances are
-deleted.  If <code>n</code> is not explicitly provided, it defaults to removing the
-first occurrence. Trailing spaces or blanks are not considered part of
-<code>substr</code>.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_endswith.html'>str_endswith</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns <code>.true.</code> if the string <code>str</code> ends with <code>suffix</code>, otherwise
-return <code>.false.</code>. With optional <code>start</code>, test beginning at that position.
-With optional <code>finish</code>, stop comparing beyond that position.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../interface/str_from_num.html'>str_from_num</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Interface</td>
-                 <td><p>Generic  interface for writing a number to a string. The calling syntax is 
-<code>str_from_num(num, frmt)</code> where <code>number</code> is a real number or an integer,
-<code>format</code> is the format desired, e.g., <em>e15.6</em>, <em>i5</em>, etc.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_get_keyval.html'>str_get_keyval</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Split a string <code>str</code> into two strings, <code>key</code> and <code>val</code> based on space
-delimiter.</p><a href="../proc/str_get_keyval.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_get_token.html'>str_get_token</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Retrieves tokens from the string <code>str</code> delimited by <code>delimiter</code>.
-<code>delimiter</code> can be a single/multi-character string. For multi-character
-delimiters, <code>any_in_delimiter=.true.</code> indicates that any one of the
-characters in <code>delimiter</code> will be considered as a delimiter whereas
-if <code>any_in_delimiter=.false.</code> the entire <code>delimiter</code> string is taken to be
-a single delimiter.</p><a href="../proc/str_get_token.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_insert.html'>str_insert</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Inserts the string <code>substr</code> into the string <code>str</code> at position <code>loc</code>. 
-Characters in <code>str</code> starting at position <code>loc</code> are shifted right to
-make room for the inserted string. Trailing spaces of <code>substr</code> are 
-removed prior to insertion.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_is_comment.html'>str_is_comment</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns <code>.true.</code> if <code>line</code> is a comment, <code>.false.</code> other wise.</p><a href="../proc/str_is_comment.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_is_digit.html'>str_is_digit</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns <code>.true.</code> if <code>str</code> contains only digits (0,1,...,9) and 
-<code>.false.</code> otherwise.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_is_letter.html'>str_is_letter</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns <code>.true.</code> if <code>str</code> contains only letters (<em>a--z</em> or <em>A--Z</em>) and
-<code>.false.</code> otherwise.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_is_space.html'>str_is_space</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns <code>.true.</code> if <code>str</code> is non-empty and contains only whitespace
-characters (tab or blankspace). Otherwise <code>.false.</code> is returned.</p><a href="../proc/str_is_space.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_match.html'>str_match</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>This routine finds the delimiter in string <code>str</code> that matches the delimiter
-in position <code>ipos</code> of <code>str</code>. The argument <code>imatch</code> contains the position of
-the matching delimiter. Allowable delimiters are (), [], {}, &lt;&gt;.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_remove_stcc.html'>str_remove_stcc</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns a copy of the string <code>str</code> with spaces, tabs, and
-control characters removed.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_shift.html'>str_shift</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Shifts characters in <code>str</code> by <code>n</code> positions (positive values
-denote a right shift and negative values denote a left shift). Characters
-that are shifted off the end are lost. Positions opened up by the shift 
-are replaced by spaces.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_split.html'>str_split</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Routine finds the first instance of a character from <code>delims</code> in the the
-string <code>str</code>. The characters before the found delimiter are output in
-<code>before</code>. The characters after the found delimiter are output in <code>str</code>.
-Repeated applications of this routine can be used to parse a string into its
-component parts. Multiple whitespaces of <code>str</code> are compacted into a single
-whitespace before splitting begins. If either <code>str</code> or <code>delimiter</code> is
-empty, an empty string is retured in <code>before</code> and <code>str</code> remains
-unchanged.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_split_to_array.html'>str_split_to_array</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Splits a string and returns the components in an array <code>array</code>.
-Multiple whitespaces of <code>str</code> are compacted into a single
-whitespace before splitting begins. If <code>str</code> is an empty string or contains
-only whitespaces, <code>array</code> will be empty. If <code>delimiter</code> is an empty string, 
-<code>str</code> will be returned in <code>array</code>. </p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_startswith.html'>str_startswith</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns <code>.true.</code> if the string <code>str</code> starts with <code>prefix</code>, otherwise
-returns <code>.false.</code>. With optional <code>start</code>, test beginning at that position.
-With optional <code>finish</code>, stop comparing beyond that position.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_strip.html'>str_strip</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td><p>Returns a copy of string <code>str</code> with the leading and trailing characters
-removed. The <code>chars</code> argument is a string specifying the set of characters to
-be removed.  The <code>chars</code> argument is not a prefix or suffix; rather, all
-combinations of its values are stripped. If <code>ends = 'l'</code>, only leading
-characters are removed, if <code>ends = 'r'</code>, only trailing characters are
-removed, and if <code>ends = 'b'</code> both leading and trailing characters are
-removed.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_strip_comment.html'>str_strip_comment</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Strips trailing comment from a string.</p><a href="../proc/str_strip_comment.html" class="pull-right"><emph>Read more&hellip;</emph></a></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_to_d.html'>str_to_d</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_to_i.html'>str_to_i</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_to_lower.html'>str_to_lower</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td><p>This function returns a string that is like the string <code>str</code> with all characters
-that are not between a pair of quotes ("..." or '...') converted to lowercase.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_to_upper.html'>str_to_upper</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td><p>This function returns a string that is like the string <code>str</code> with all characters
-that are not between a pair of quotes ("..." or '...') converted to uppercase.</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/str_trimzero.html'>str_trimzero</a></td>
-                 <td><a href='../module/strings_m.html'>strings_m</a></td>
-                 <td>Function</td>
-                 <td><p>Deletes nonsignificant trailing zeroes from number string str. If number
-string ends in a decimal point, one trailing zero is added.</p></td>
                </tr>
 			   <tr>
                  <td><a href='../proc/subtract_transpose.html'>subtract_transpose</a></td>
@@ -1058,78 +455,6 @@ a warning message.</p></td>
                  <td><a href='../module/utils_math_m.html'>utils_math_m</a></td>
                  <td>Subroutine</td>
                  <td><p>Returns the vector triple product <strong>d</strong> = <strong>a</strong> x (<strong>b</strong> x <strong>c</strong>)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/vtk_read_mesh.html'>vtk_read_mesh</a></td>
-                 <td><a href='../module/atc_vtk_m.html'>atc_vtk_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Reads a mesh from a legacy VTK file (ASCII format)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/vtk_read_rectilinear_grid.html'>vtk_read_rectilinear_grid</a></td>
-                 <td><a href='../module/atc_vtk_m.html'>atc_vtk_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Reads a mesh of type RECTILINEAR_GRID from a legacy VTK file (ASCII format)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/vtk_read_scalar.html'>vtk_read_scalar</a></td>
-                 <td><a href='../module/atc_vtk_m.html'>atc_vtk_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Reads scalar data from a legacy VTK file (ASCII format)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/vtk_read_structured_grid.html'>vtk_read_structured_grid</a></td>
-                 <td><a href='../module/atc_vtk_m.html'>atc_vtk_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Reads a mesh of type STRUCTURED_GRID from a legacy VTK file (ASCII format)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/vtk_read_tensor.html'>vtk_read_tensor</a></td>
-                 <td><a href='../module/atc_vtk_m.html'>atc_vtk_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Reads symmetric tensor data from a legacy VTK file (ASCII format)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/vtk_read_unstructured_grid.html'>vtk_read_unstructured_grid</a></td>
-                 <td><a href='../module/atc_vtk_m.html'>atc_vtk_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Reads a mesh of type UNSTRUCTURED_GRID from a legacy VTK file (ASCII format)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/vtk_read_vector.html'>vtk_read_vector</a></td>
-                 <td><a href='../module/atc_vtk_m.html'>atc_vtk_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Reads vector data from a legacy VTK file (ASCII format)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/vtk_write_data_attrib.html'>vtk_write_data_attrib</a></td>
-                 <td><a href='../module/atc_vtk_m.html'>atc_vtk_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Writes data attribute header to a legacy VTK file (ASCII format)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/vtk_write_mesh.html'>vtk_write_mesh</a></td>
-                 <td><a href='../module/atc_vtk_m.html'>atc_vtk_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Writes a mesh to a legacy VTK file (ASCII format)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/vtk_write_scalar.html'>vtk_write_scalar</a></td>
-                 <td><a href='../module/atc_vtk_m.html'>atc_vtk_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Writes to a scalar data to a legacy VTK file (ASCII format)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/vtk_write_tensor.html'>vtk_write_tensor</a></td>
-                 <td><a href='../module/atc_vtk_m.html'>atc_vtk_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Writes to a symmetric tensor data to a legacy VTK file (ASCII format)</p></td>
-               </tr>
-			   <tr>
-                 <td><a href='../proc/vtk_write_vector.html'>vtk_write_vector</a></td>
-                 <td><a href='../module/atc_vtk_m.html'>atc_vtk_m</a></td>
-                 <td>Subroutine</td>
-                 <td><p>Writes to a vector data to a legacy VTK file (ASCII format)</p></td>
                </tr>
 			 </tbody></table>
              
